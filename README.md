@@ -34,7 +34,6 @@ Qualquer pessoa que leia livros e queira manter um registro pessoal simples, org
 ![Bookshelf Tracker](preview/Bookshelf-add.png)
 ![Bookshelf Tracker](preview/Bookshelf-form.png)
 ![Bookshelf Tracker](preview/Bookshelf-1.png)
-![Bookshelf Tracker](preview/Tests.png)
 
 ## Tecnologias
 
@@ -43,6 +42,7 @@ Qualquer pessoa que leia livros e queira manter um registro pessoal simples, org
 - HTML + CSS + JavaScript
 - pytest
 - ruff
+- Supabase (PostgreSQL)
 
 ## Dependências
 
@@ -53,10 +53,15 @@ Qualquer pessoa que leia livros e queira manter um registro pessoal simples, org
 - requests
 - gunicorn
 - python-dotenv
+- supabase
 
 ## API
 
 Integração com [Open Library API](https://openlibrary.org/developers/api) para busca automática de capa, autor e ano de publicação a partir do título do livro.
+
+## Banco de Dados
+
+Integração com [Supabase](https://supabase.com) para persistência dos dados em nuvem (PostgreSQL).
 
 ## Instalação e Execução
 
@@ -77,12 +82,16 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Rode o servidor:
+4. Crie o arquivo `.env` na raiz do projeto:
+SUPABASE_URL=https://seu-project-id.supabase.co
+SUPABASE_KEY=sua-publishable-key
+
+5. Rode o servidor:
 ```bash
 python run.py
 ```
 
-5. Acesse no navegador na porta indicada
+6. Acesse no navegador na porta indicada
 
 ## Testes
 
@@ -102,7 +111,8 @@ ruff check app/
 
 ## Autores
 
-ventosincaos — https://github.com/ventosincaos
+- ventosincaos — https://github.com/ventosincaos
+- luisacarvalho06 — https://github.com/luisacarvalho06
 
 ## Disciplina
 
